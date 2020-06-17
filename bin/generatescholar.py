@@ -30,13 +30,13 @@ for pub in author.publications:
   pubInfo += '"author": "' + dequote( pub.bib['author'] ) + '"\n'
   pubInfo += '"title": "' + dequote( pub.bib['title'] ) + '"\n'
   
-  if pub.bib['journal']:
+  if 'journal' in pub.bib:
     pubInfo += '"journal": "' + dequote( pub.bib['journal'] ) + '"\n'
   
   pubInfo += '"volume": "' + dequote( pub.bib['volume'] ) + '"\n'
   pubInfo += '"year": "' + dequote( pub.bib['year'] ) + '"\n'
   pubInfo += '"pages": "' + dequote( pub.bib['pages'] ) + '"\n'
-  if pub.bib['eprint']:
+  if 'eprint' in pub.bib:
     pubInfo += '"link": "' + dequote( pub.bib['eprint'] ) + '"\n'
   
   # pubInfo += '"bibtex": ' + dequote( pub.bibtex ) + '"\n'
