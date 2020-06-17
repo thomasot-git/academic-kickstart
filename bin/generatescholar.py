@@ -2,7 +2,7 @@ import sys
 import json
 from scholarly import scholarly
 
-search_query = scholarly.search_author('Rong Du')
+search_query = scholarly.search_author('Thomas Ohlson Timoudas')
 author = next(search_query).fill()
 
 # print(author)
