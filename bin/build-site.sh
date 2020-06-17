@@ -9,6 +9,3 @@ python bin/generatescholar.py
 echo "Saving Scholar json on data folder"
 # mkdir -p data
 # mv citecount.json data/
-
-echo "Calling hugo"
-hugo
