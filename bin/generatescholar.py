@@ -11,7 +11,7 @@ author = next(search_query).fill()
 
 file = open("publications.json","w")
 
-for pub in author.publications
+for pub in author.publications:
   pub.fill()
   print(pub)
   file.write(json.dumps(pub))
