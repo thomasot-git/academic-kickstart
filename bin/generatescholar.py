@@ -38,7 +38,7 @@ for pub in author.publications:
 
   pubInfo = '{\n'
   
-  for key in keys
+  for key in keys:
     if key in pub.bib:
       pubInfo += : keys[key] + ': ' + dequote( pub.bib[key] ) + '"\n'
   
