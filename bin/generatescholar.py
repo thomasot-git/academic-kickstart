@@ -8,10 +8,12 @@ author = next(search_query).fill()
 # print(author)
 
 # Take a closer look at the first publication
-pub = author.publications[4].fill()
-
-print(pub)
 
 file = open("publications.json","w")
-file.write(json.dumps(pub))
+
+for pub in author.publications
+  pub.fill()
+  print(pub)
+  file.write(json.dumps(pub))
+
 file.close()
