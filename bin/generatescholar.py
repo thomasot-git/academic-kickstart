@@ -7,7 +7,7 @@ author = next(search_query).fill()
 
 # print(author)
 
-print(author.publications[0].bibtex)
+# print(author.publications[0].bibtex)
 
 # Take a closer look at the first publication
 
