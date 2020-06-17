@@ -31,10 +31,10 @@ for pub in author.publications:
   if pub.bib['journal']:
     pubInfo += '"journal": "' + dequote( pub.bib['journal'] ) + '"\n'
   
-  pubInfo += '"volume": "' + myJSONClean( pub.bib['volume'] ) + '"\n'
-  pubInfo += '"year": "' + myJSONClean( pub.bib['year'] ) + '"\n'
-  pubInfo += '"pages": "' + myJSONClean( pub.bib['pages'] ) + '"\n'
-  pubInfo += '"link": "' + myJSONClean( pub.bib['eprint'] ) + '"\n'
+  pubInfo += '"volume": "' + dequote( pub.bib['volume'] ) + '"\n'
+  pubInfo += '"year": "' + dequote( pub.bib['year'] ) + '"\n'
+  pubInfo += '"pages": "' + dequote( pub.bib['pages'] ) + '"\n'
+  pubInfo += '"link": "' + dequote( pub.bib['eprint'] ) + '"\n'
   pubInfo += '"bibtex": ' + dequote( pub.bibtex ) + '"\n'
   pubInfo += '}'
   
