@@ -53,6 +53,8 @@ for pub in author.publications:
   pubs += pubs
   
 pubs += ']\n}'
+
+print(pubs)
   
 file.write(pubs)
 
