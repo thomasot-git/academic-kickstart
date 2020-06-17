@@ -10,6 +10,8 @@ author = next(search_query).fill()
 # Take a closer look at the first publication
 pub = author.publications[0].fill()
 
+print(pub)
+
 #class MyEncoder(JSONEncoder):
 #        def default(self, o):
 #            return o.__dict__
