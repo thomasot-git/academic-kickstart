@@ -46,7 +46,7 @@ for pub in author.publications:
   
   print(pubInfo)
   
-  pubs += pubs
+  pubs += pubInfo
   
 pubs += ']\n}'
 
