@@ -2,7 +2,7 @@ import sys
 import json
 from scholarly import scholarly
 
-search_query = scholarly.search_author('Carlo Fischione')
+search_query = scholarly.search_author('Thomas Ohlson Timoudas')
 author = next(search_query).fill()
 
 # print(author)
@@ -11,12 +11,6 @@ author = next(search_query).fill()
 pub = author.publications[0].fill()
 
 print(pub)
-
-class MyEncoder(JSONEncoder):
-        def default(self, o):
-            return o.__dict__
-
-pubJSON = MyEncoder().encode(pub)
 
 file = open("publications.json","w")
 file.write(json.dumps(pub))
