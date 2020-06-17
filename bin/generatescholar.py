@@ -35,7 +35,7 @@ for pub in author.publications:
   pubInfo += '"year": "' + dequote( pub.bib['year'] ) + '"\n'
   pubInfo += '"pages": "' + dequote( pub.bib['pages'] ) + '"\n'
   pubInfo += '"link": "' + dequote( pub.bib['eprint'] ) + '"\n'
-  pubInfo += '"bibtex": ' + dequote( pub.bibtex ) + '"\n'
+  pubInfo += '"bibtex": ' + dequote( pub.bibtex() ) + '"\n'
   pubInfo += '}'
   
   print(pubInfo)
