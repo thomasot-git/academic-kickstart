@@ -31,7 +31,7 @@ for pub in author.publications:
   if pub.bib['journal']:
     pubInfo += '"journal": "' + dequote( pub.bib['journal'] ) + '"\n'
   
-  pubInfo += '"link": "' + dequote( pub.bib['elink'] ) + '"\n'
+  pubInfo += '"link": "' + myJSONClean( pub.bib['eprint'] ) + '"\n'
   pubInfo += '"bibtex": ' + dequote( pub.bibtex ) + '"\n'
   pubInfo += '}'
   
