@@ -7,5 +7,5 @@ echo "--- Extracting Scholar data ---"
 python bin/generatescholar.py
 
 echo "--- Saving Scholar json on data folder ---"
-mkdir -p data
-mv publications.json data/
+# mkdir -p data
+# mv publications.json data/
