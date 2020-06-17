@@ -13,11 +13,16 @@ file = open("publications.json","w")
 
 for pub in author.publications:
   pub.fill()
+  print(pub)
   pubInfo = '{\n'
   pubInfo += '"author": ' + pub.bib['author'] + '\n'
   pubInfo += '"title": ' + pub.bib['title'] + '\n'
+  
+  if pub.bib['journal']:
+    pubInfo += '"journal": ' + pub.bib['journal'] + '\n'
+  
+  pubInfo += '"link": ' + pub.bib['elink'] + '\n'
   pubInfo += '}'
-  print(pubInfo)
-  file.write(pubInfo)
+  file.write(json.dumps(pub))
 
 file.close()
