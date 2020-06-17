@@ -12,13 +12,12 @@ pub = author.publications[0].fill()
 
 print(pub)
 
-#class MyEncoder(JSONEncoder):
-#        def default(self, o):
-#            return o.__dict__
+class MyEncoder(JSONEncoder):
+        def default(self, o):
+            return o.__dict__
 
-#MyEncoder().encode(f)
+pubJSON = MyEncoder().encode(pub)
 
 file = open("publications.json","w")
-file.write("a")
-# file.write(json.dumps(pub))
+file.write(json.dumps(pub))
 file.close()
