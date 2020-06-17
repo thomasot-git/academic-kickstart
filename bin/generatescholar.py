@@ -18,6 +18,6 @@ for pub in author.publications:
   pubInfo += '"title": ' + pub.bib['title'] + '\n'
   pubInfo += '}'
   print(pubInfo)
-  file.write(pub)
+  file.write(pubInfo)
 
 file.close()
