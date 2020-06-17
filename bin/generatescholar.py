@@ -23,6 +23,8 @@ def dequote(s):
 
 file = open("publications.json","w")
 
+pubs = '{\n' + '"publication": [\n'
+
 for pub in author.publications:
   pub.fill()
 
@@ -47,6 +49,11 @@ for pub in author.publications:
   pubInfo += '}'
   
   print(pubInfo)
-  file.write(pubInfo)
+  
+  pubs += pubs
+  
+pubs += ']\n}'
+  
+file.write(pubs)
 
 file.close()
