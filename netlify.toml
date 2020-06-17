@@ -1,6 +1,6 @@
 [build]
-  # command = "chmod a+x ./bin/build-site.sh && hugo --gc --minify -b $URL"
-  command = "hugo --gc --minify -b $URL"
+  command = "chmod a+x ./bin/build-site.sh && ./bin/build-site.sh && hugo --gc --minify -b $URL"
+  # command = "hugo --gc --minify -b $URL"
   publish = "public"
 
 [build.environment]
