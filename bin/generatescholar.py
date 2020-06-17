@@ -10,6 +10,6 @@ print(author)
 # Take a closer look at the first publication
 pub = author.publications[0].fill()
 
-file = open("./data/googlescholar/publications.json","w")
+file = open("publications.json","w")
 file.write(pub)
 file.close()
