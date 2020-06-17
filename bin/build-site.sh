@@ -11,4 +11,4 @@ echo "Saving Scholar json on data folder"
 # mv citecount.json data/
 
 echo "Calling hugo"
-# hugo
+hugo
