@@ -1,5 +1,3 @@
-import sys
-import json
 from scholarly import scholarly
 
 search_query = scholarly.search_author('Thomas Ohlson Timoudas')
@@ -40,7 +38,7 @@ for pub in author.publications:
   
   for key in keys:
     if key in pub.bib:
-      pubInfo += : keys[key] + ': ' + dequote( pub.bib[key] ) + '"\n'
+      pubInfo += keys[key] + ': ' + dequote( pub.bib[key] ) + '"\n'
   
   pubInfo += '}'
   
