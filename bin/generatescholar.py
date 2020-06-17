@@ -25,29 +25,23 @@ file = open("publications.json","w")
 
 pubs = '{\n' + '"publication": [\n'
 
+keys = {  'author' : "author",
+          'title' : "title",
+          'year' : "year",
+          'journal' : "journal",
+          'volume' : "volume",
+          'pages' : "pages",
+          'eprint' : "link" }
+
 for pub in author.publications:
   pub.fill()
 
   pubInfo = '{\n'
-  pubInfo += '"author": "' + dequote( pub.bib['author'] ) + '"\n'
-  pubInfo += '"title": "' + dequote( pub.bib['title'] ) + '"\n'
   
-  if 'year' in pub.bib:
-    pubInfo += '"year": "' + dequote( pub.bib['year'] ) + '"\n'
+  for key in keys
+    if key in pub.bib:
+      pubInfo += : keys[key] + ': ' + dequote( pub.bib[key] ) + '"\n'
   
-  if 'journal' in pub.bib:
-    pubInfo += '"journal": "' + dequote( pub.bib['journal'] ) + '"\n'
-  
-  if 'volume' in pub.bib:
-    pubInfo += '"volume": "' + dequote( pub.bib['volume'] ) + '"\n'
-  
-  if 'pages' in pub.bib:
-    pubInfo += '"pages": "' + dequote( pub.bib['pages'] ) + '"\n'
-  
-  if 'eprint' in pub.bib:
-    pubInfo += '"link": "' + dequote( pub.bib['eprint'] ) + '"\n'
-  
-  # pubInfo += '"bibtex": ' + dequote( pub.bibtex ) + '"\n'
   pubInfo += '}'
   
   print(pubInfo)
