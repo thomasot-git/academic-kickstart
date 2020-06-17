@@ -29,13 +29,17 @@ for pub in author.publications:
   pubInfo = '{\n'
   pubInfo += '"author": "' + dequote( pub.bib['author'] ) + '"\n'
   pubInfo += '"title": "' + dequote( pub.bib['title'] ) + '"\n'
+  pubInfo += '"year": "' + dequote( pub.bib['year'] ) + '"\n'
   
   if 'journal' in pub.bib:
     pubInfo += '"journal": "' + dequote( pub.bib['journal'] ) + '"\n'
   
-  pubInfo += '"volume": "' + dequote( pub.bib['volume'] ) + '"\n'
-  pubInfo += '"year": "' + dequote( pub.bib['year'] ) + '"\n'
+  if 'volume' in pub.bib:
+    pubInfo += '"volume": "' + dequote( pub.bib['volume'] ) + '"\n'
+  
+  if 'pages' in pub.bib:
   pubInfo += '"pages": "' + dequote( pub.bib['pages'] ) + '"\n'
+  
   if 'eprint' in pub.bib:
     pubInfo += '"link": "' + dequote( pub.bib['eprint'] ) + '"\n'
   
