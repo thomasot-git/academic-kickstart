@@ -31,7 +31,9 @@ for pub in author.publications:
   pubInfo = '{\n'
   pubInfo += '"author": "' + dequote( pub.bib['author'] ) + '"\n'
   pubInfo += '"title": "' + dequote( pub.bib['title'] ) + '"\n'
-  pubInfo += '"year": "' + dequote( pub.bib['year'] ) + '"\n'
+  
+  if 'year' in pub.bib:
+    pubInfo += '"year": "' + dequote( pub.bib['year'] ) + '"\n'
   
   if 'journal' in pub.bib:
     pubInfo += '"journal": "' + dequote( pub.bib['journal'] ) + '"\n'
