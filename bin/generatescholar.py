@@ -9,20 +9,33 @@ author = next(search_query).fill()
 
 # Take a closer look at the first publication
 
+def dequote(s):
+    """
+    If a string has single or double quotes around it, remove them.
+    Make sure the pair of quotes match.
+    If a matching pair of quotes is not found, return the string unchanged.
+    """
+    if (s[0] == s[-1]) and s.startswith(("'", '"')):
+        return s[1:-1]
+    return s
+
 file = open("publications.json","w")
 
 for pub in author.publications:
   pub.fill()
-  print(pub)
+
   pubInfo = '{\n'
-  pubInfo += '"author": ' + pub.bib['author'] + '\n'
-  pubInfo += '"title": ' + pub.bib['title'] + '\n'
+  pubInfo += '"author": "' + dequote( pub.bib['author'] ) + '"\n'
+  pubInfo += '"title": "' + dequote( pub.bib['title'] ) + '"\n'
   
   if pub.bib['journal']:
-    pubInfo += '"journal": ' + pub.bib['journal'] + '\n'
+    pubInfo += '"journal": "' + dequote( pub.bib['journal'] ) + '"\n'
   
-  pubInfo += '"link": ' + pub.bib['elink'] + '\n'
+  pubInfo += '"link": "' + dequote( pub.bib['elink'] ) + '"\n'
+  pubInfo += '"bibtex": ' + dequote( pub.bibtex ) + '"\n'
   pubInfo += '}'
-  file.write(json.dumps(pub))
+  
+  print(pubInfo)
+  file.write(pubInfo)
 
 file.close()
