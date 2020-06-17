@@ -7,6 +7,8 @@ author = next(search_query).fill()
 
 # print(author)
 
+print(author.publications[0].bibtex)
+
 # Take a closer look at the first publication
 
 def dequote(s):
@@ -37,7 +39,7 @@ for pub in author.publications:
   if pub.bib['eprint']:
     pubInfo += '"link": "' + dequote( pub.bib['eprint'] ) + '"\n'
   
-  pubInfo += '"bibtex": ' + dequote( pub.bibtex() ) + '"\n'
+  # pubInfo += '"bibtex": ' + dequote( pub.bibtex ) + '"\n'
   pubInfo += '}'
   
   print(pubInfo)
