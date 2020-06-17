@@ -8,6 +8,6 @@ author = next(search_query).fill()
 # Take a closer look at the first publication
 pub = author.publications[0].fill()
 
-file = open("publications.json","w")
+file = open("./data/googlescholar/publications.json","w")
 file.write(pub)
 file.close()
