@@ -14,6 +14,7 @@ file = open("publications.json","w")
 for pub in author.publications:
   pub.fill()
   print(pub)
+  print(json.dumps(pub))
   file.write(json.dumps(pub))
 
 file.close()
