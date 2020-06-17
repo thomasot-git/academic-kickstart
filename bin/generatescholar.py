@@ -38,7 +38,7 @@ for pub in author.publications:
     pubInfo += '"volume": "' + dequote( pub.bib['volume'] ) + '"\n'
   
   if 'pages' in pub.bib:
-  pubInfo += '"pages": "' + dequote( pub.bib['pages'] ) + '"\n'
+    pubInfo += '"pages": "' + dequote( pub.bib['pages'] ) + '"\n'
   
   if 'eprint' in pub.bib:
     pubInfo += '"link": "' + dequote( pub.bib['eprint'] ) + '"\n'
